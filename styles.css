@@ -1,0 +1,88 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url("./fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+:root {
+  --background: hsl(220, 8%, 15%);
+  --surface: hsl(220, 7%, 9%);
+  --surface-2: hsl(220, 6%, 12%);
+
+  --border: hsl(220, 5%, 24%);
+  --border-2: hsl(220, 5%, 30%);
+
+  --text: hsl(220, 10%, 92%);
+  --heading: hsl(220, 15%, 97%);
+  --muted: hsl(220, 5%, 45%);
+}
+
+@keyframes fade-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+main {
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--background);
+}
+
+h1, p, nav {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fade-up 1.4s ease forwards;
+}
+
+h1 {
+  color: var(--heading);
+
+  grid-column: 3 / 9;
+  grid-row: 2;
+}
+
+p {
+  color: var(--text);
+
+  grid-column: 3 / 9;
+  grid-row: 4;
+
+  animation-delay: 1.0s;
+}
+
+nav {
+  grid-column: 4 / 10;
+  grid-row: 7;
+
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+
+  box-shadow: 
+    0 1px 0 rgba(255, 255, 255, 0.08) inset,
+    0 8px 16px rgba(0, 0, 0, 0.6);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+
+  animation-delay: 2.0s;
+}
+
+nav a {
+  color: var(--text);
+}
+
+nav a:hover {
+  color: var(--muted);
+}
+
