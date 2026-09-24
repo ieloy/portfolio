@@ -25,11 +25,11 @@
 }
 
 main {
-  min-height: 100vh;
+  min-height: 80vh;
 
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-rows: repeat(16, 40px);
 }
 body {
   font-family: 'Montserrat', sans-serif;
@@ -39,43 +39,49 @@ body {
 h1, p, nav {
   opacity: 0;
   transform: translateY(20px);
+}
+
+.loaded h1,
+.loaded p,
+.loaded nav {
   animation: fade-up 1.4s ease forwards;
+}
+
+.loaded p {
+  animation-delay: 0.7s;
+}
+
+.loaded nav {
+  animation-delay: 1.2s;
 }
 
 h1 {
   color: var(--heading);
-
-  grid-column: 3 / 9;
-  grid-row: 2;
+  grid-column: 4 / 10;
+  grid-row: 4;
 }
 
 p {
   color: var(--text);
-
-  grid-column: 3 / 9;
-  grid-row: 4;
-
-  animation-delay: 1.0s;
+  grid-column: 4 / 11;
+  grid-row: 7 / 8;
 }
 
 nav {
-  grid-column: 4 / 10;
-  grid-row: 7;
-
+  grid-column: 5 / 9;
+  grid-row: 12 / 16;
   background-color: var(--surface);
   border: 1px solid var(--border);
   border-radius: 12px;
-
   box-shadow: 
     0 1px 0 rgba(255, 255, 255, 0.08) inset,
     0 8px 16px rgba(0, 0, 0, 0.6);
-  
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 60px;
-
-  animation-delay: 2.0s;
+  flex-wrap: wrap;
+  padding: 20px;
 }
 
 nav a {
