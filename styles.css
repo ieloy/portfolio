@@ -92,3 +92,25 @@ nav a:hover {
   color: var(--muted);
 }
 
+@media (max-width: 600px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 120px 40px 60px;
+    gap: 60px;
+  }
+
+  h1,
+  p,
+  nav {
+    margin: 0;
+  }
+
+  nav {
+    width: auto;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+  }
+}
