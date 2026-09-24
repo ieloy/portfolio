@@ -101,9 +101,7 @@ nav a:hover {
     gap: 60px;
   }
 
-  h1,
-  p,
-  nav {
+  h1, p, nav {
     margin: 0;
   }
 
